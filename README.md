@@ -4,7 +4,7 @@
 The training environment (PyTorch and dependencies) can be installed as follows:
 
 ```
-https://github.com/Haichao-Zhang/PEX.git
+git clone https://github.com/Haichao-Zhang/PEX.git
 cd PEX
 
 python3 -m venv .venv_pex
@@ -37,7 +37,7 @@ algorithm=pex (or any other algorithms in [scratch, direct, buffer, pex])
 
 and then run
 ```
-CUDA_VISIABLE_DEVICES=0 python ./main_online.py --log_dir=$root_dir/antmaze-large-play-v0_run1_$algorithm --env_name=antmaze-large-play-v0 --tau 0.9 --beta 10.0 --ckpt_path=$path_to_offline_ckpt --eval_episode_num=10 --algorithm=$algorithm
+CUDA_VISIABLE_DEVICES=0 python ./main_online.py --log_dir=$root_dir/antmaze-large-play-v0_run1_$algorithm --env_name=antmaze-large-play-v0 --tau 0.9 --beta 10.0 --ckpt_path=$path_to_offline_ckpt --eval_episode_num=100 --algorithm=$algorithm
 ```
 
 
